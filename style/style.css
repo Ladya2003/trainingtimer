@@ -1,0 +1,212 @@
+@font-face {
+    font-family: Cartoon;
+    src: url(../font/National\ Cartoon.ttf);
+}
+
+@font-face {
+    font-family: Cond;
+    src: url(../font/Sulangor-SemCond.otf);
+}
+
+@font-face {
+    font-family: Rubik;
+    src: url(../font/RubikDirt-Regular.ttf);
+}
+
+::-webkit-scrollbar {
+    display: none;
+  }
+body {
+    margin: 0;
+}
+.timer-container {
+    width: 100vw;
+    height: 180vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; 
+    flex-direction: column;
+    gap: 5vw;
+    /* background: linear-gradient(to bottom, rgb(228, 167, 243), rgb(119, 249, 253)); */
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+.bg-img {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    filter: brightness(90%);
+}
+.timer-tools {
+    display: flex;
+    gap: 2vw;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    padding: 1vw 0;
+    margin: 3vw;
+}
+.button-90s {
+    padding: 1.5vw 2.5vw;
+    font-size: 1.25vw;
+    background-color: rgb(253, 108, 108);
+    border-radius: 2vw;
+    transition: all 0.8s ease-out;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.493);
+    border: none;
+    color: rgb(56, 46, 46);
+    cursor: pointer;
+    font-family: Cond;
+}
+.button-90s:hover {
+    background-color: rgb(194, 12, 12);
+    color: white;
+}
+.timer {
+    background-color: rgb(243, 115, 98);
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.493);
+    padding: 3vw 4vw;
+    border-radius: 10vw;
+}
+.timer90s {
+    background-color: rgb(243, 115, 98);
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.493);
+    padding: 3vw 4vw;
+    border-radius: 10vw;
+    animation: timer-bg 90s linear;
+}
+.timer120s {
+    background-color: rgb(243, 115, 98);
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.493);
+    padding: 3vw 4vw;
+    border-radius: 10vw;
+    animation: timer-bg 120s linear;
+}
+.timer-default-text {
+    font-size: 2vw;
+    color: rgb(65, 63, 63);
+    margin: 0;
+    font-family: Cartoon;
+}
+.timer #timer {
+    color: rgb(39, 38, 38);
+    font-size: 3vw;
+    margin: 0;
+    font-family: Cartoon;
+}
+.progress-bar {
+    background-color: rgb(255, 188, 188);
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.493);
+    width: 25vw;
+    height: 2vw;
+    border-radius: 2vw;
+    overflow: hidden;
+}
+.progress90s {
+    background-color: black;
+    background: url(../img/progress1.gif);
+    height: 2vw;
+    border-radius: 0.8vw;
+    animation: progress-anim 90s linear;
+}
+.progress120s {
+    background-color: black;
+    background: url(../img/progress1.gif);
+    height: 2vw;
+    border-radius: 0.8vw;
+    animation: progress-anim 120s linear;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+}
+.exercises-container {
+    display: flex;
+    gap: 2vw;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    padding: 1vw 0;
+}
+.exercise-1 h2 {
+    font-family: Rubik;
+    font-size: 2vw;
+    color: white;
+    font-weight: 100;
+    transition: all 0.2s ease-out;
+}
+.exercise-1 h2:hover {
+    letter-spacing: 4px;
+}
+.exercise-1 img {
+    width: 40vw;
+}
+
+
+@media (max-width: 1000px) {
+    .timer-container {
+        height: 100vh !important;
+        justify-content: center !important;
+    }
+    .button-90s {
+        font-size: 4vw !important;
+    }
+    .timer-default-text {
+        font-size: 7vw !important;
+    }
+    #timer {
+        font-size: 7vw !important;
+    }
+    .progress-bar {
+        width: 60vw !important;
+        height: 5vw !important;
+    }
+    .progress90s {
+        height: 5vw !important;
+        animation: progress-anim-mobile 90s linear;
+    }
+    .progress120s {
+        height: 5vw !important;
+        animation: progress-anim-mobile 120s linear;
+    }
+    .exercise-1 img {
+        width: 80vw !important;
+    }
+    .exercise-1 h2 {
+        font-size: 4vw;
+    }
+}
+
+
+
+
+
+@keyframes progress-anim {
+    from {
+        width: 0;
+    }
+    to {
+        width: 25vw;
+    }
+}
+@keyframes progress-anim-mobile {
+    from {
+        width: 0;
+    }
+    to {
+        width: 60vw;
+    }
+}
+
+@keyframes timer-bg {
+    from {
+        background-color: rgb(248, 24, 24);
+    }
+    to {
+        background-color: rgb(247, 250, 81);
+    }
+}
