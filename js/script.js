@@ -43,7 +43,7 @@ function progressBar120s() {
     let progress_bar = document.querySelector("#progress-bar");
     let progress = `<div class="progress120s"></div>`;
     progress_bar.innerHTML = progress;
-    setTimeout(audio, 119500);
+    setTimeout(audio, 119000);
 }
 
 function audio() {
