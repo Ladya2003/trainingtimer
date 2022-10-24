@@ -147,6 +147,33 @@ a:link, a:visited {
 }
 
 
+
+
+/* для pages/dumbbel.html */
+.exercises-container2 {
+    margin-top: 3vw;
+}
+.progress-conntainer {
+    display: flex;
+    flex-direction: column;
+    margin: 3vw auto;
+    gap: 3vw;
+    background-color: rgba(61, 66, 92, 0.466);
+    padding: 2vw 4vw; 
+    width: 60%;
+    border-radius: 1vw;
+}
+.progress-half-ex {
+    display: flex;
+    gap: 2vw;
+    justify-content: center;
+}
+.training-img {
+    border-radius: 1vw;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.61);
+}
+
+
 @media (max-width: 1000px) {
     .timer-container {
         height: 100vh !important;
