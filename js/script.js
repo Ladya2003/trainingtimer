@@ -74,3 +74,39 @@ function progressBar120s() {
 function audio() {
     new Audio('sound/bell-sound.mp3').play()
 }
+
+
+
+// modal
+
+
+function btnClick() {
+    let modal = document.getElementById("myModal");
+    modal.style.display = "block";
+}
+
+function spanClick() {
+    let modal_content = document.getElementsByClassName("modal-content")[0];
+    modal_content.classList.add("modal-content-disappear");
+    setTimeout(display_none, 500); 
+}
+
+window.onclick = function(event) {
+    let modal = document.getElementById("myModal");
+    if (event.target == modal) {
+      let modal_content = document.getElementsByClassName("modal-content")[0];
+      modal_content.classList.add("modal-content-disappear");
+      setTimeout(display_none, 500); 
+    }
+  }
+
+function display_none() {
+    let modal = document.getElementById("myModal");
+    let modal_content = document.getElementsByClassName("modal-content")[0];
+    modal.style.display = "none";
+    modal_content.classList.remove("modal-content-disappear");
+}
+
+function alertMessage() {
+  alert("Почта Артема: artsynek@gmail.com");
+}

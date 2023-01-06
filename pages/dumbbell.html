@@ -7,13 +7,24 @@
     <title>Timer</title>
     <script src="js/script.js"></script>
     <link href="../style/style.css" rel="stylesheet">
+    <script src="../js/script.js"></script>
 </head>
 <body>
     <div class="exercises-container exercises-container2">
         <img class="bg-img" src="../img/bg-img4.gif">
         <div class="exercise-1">
             <h2>Dumbbell exercises</h2>
-            <img class="training-img" src="../img/TRAINING-1.jpg">
+            <img class="training-img" onclick="btnClick()" src="../img/TRAINING-1.jpg">
+
+
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <img class="training-img-in-modal" onclick="btnClick()" src="../img/TRAINING-1.jpg">
+                    <span class="close" onclick="spanClick()">&times;</span>
+                </div>
+            </div>
+
+
             <div class="progress-conntainer">
                 <div class="progress-half-ex">
                     <div class="single-ex">

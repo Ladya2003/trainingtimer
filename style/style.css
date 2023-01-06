@@ -149,6 +149,7 @@ a:link, a:visited {
 
 
 
+
 /* для pages/dumbbel.html */
 .exercises-container2 {
     margin-top: 3vw;
@@ -171,6 +172,7 @@ a:link, a:visited {
 .training-img {
     border-radius: 1vw;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.61);
+    cursor: pointer;
 }
 
 
@@ -180,6 +182,137 @@ a:link, a:visited {
 .timer-120s-anim {
     animation: timer120s 90s linear;
 }
+
+/* progress on dumbbell ex-s page */
+
+.single-ex {
+    display: flex;
+    gap: 0.5vw;
+}
+.single-ex input[type="checkbox"] {
+    transform:scale(2);
+    opacity:0.9;
+    cursor:pointer;
+}
+
+
+/* modal */
+
+
+
+.modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed; /* Оставаться на месте */
+    z-index: 1; /* Сидеть на вершине */
+    padding-top: 1vw; /* Расположение коробки */
+    left: 0;
+    top: 0;
+    width: 100%; /* Полная ширина */
+    height: 100%; /* Полная высота */
+    overflow: auto; /* Включите прокрутку, если это необходимо */
+    background-color: rgba(0, 0, 0, 0.4); /*Черный с непрозрачностью */
+  }
+
+
+.modal-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 10vw;
+    background-color: rgba(73, 68, 68, 0.8156862745);
+    margin: auto;
+    padding: 2vw;
+    border-radius: 2vw;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    -webkit-animation: animatetop 0.4s ease-out;
+            animation: animatetop 0.4s ease-out;
+  }
+  .modal-content a {
+    margin: 0;
+    padding: 0;
+  }
+
+
+.modal-content-disappear {
+    top: 0;
+    opacity: 0;
+    -webkit-animation: animbottom 0.4s ease-in;
+            animation: animbottom 0.4s ease-in;
+  }
+
+
+
+  
+@-webkit-keyframes animatetop {
+    from {
+      top: -300px;
+      opacity: 0;
+    }
+    to {
+      top: 0;
+      opacity: 1;
+    }
+  }
+  
+  @keyframes animatetop {
+    from {
+      top: -300px;
+      opacity: 0;
+    }
+    to {
+      top: 0;
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes animbottom {
+    from {
+      top: 0;
+      opacity: 1;
+    }
+    to {
+      top: -300px;
+      opacity: 0;
+    }
+  }
+  @keyframes animbottom {
+    from {
+      top: 0;
+      opacity: 1;
+    }
+    to {
+      top: -300px;
+      opacity: 0;
+    }
+  }
+  .close {
+    color: white;
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    font-size: 2.5vw;
+    font-weight: bold;
+    transition: all 0.4s ease;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }/*# sourceMappingURL=aboutus.css.map */
+
+  .training-img-in-modal {
+    height: 90vh !important;
+    width: auto !important;
+    border-radius: 2vw;
+  }
+
+
+
+
+
+
 
 @media (max-width: 1000px) {
     .timer-container {
