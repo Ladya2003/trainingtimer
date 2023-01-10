@@ -21,7 +21,7 @@ body {
 }
 .timer-container {
     width: 100vw;
-    height: 180vh;
+    /* height: 180vh; */
     display: flex;
     justify-content: flex-start;
     align-items: center; 
@@ -30,7 +30,7 @@ body {
     /* background: linear-gradient(to bottom, rgb(228, 167, 243), rgb(119, 249, 253)); */
     margin: 0;
     position: relative;
-    overflow: hidden;
+    overflow: auto;;
 }
 .bg-img {
     width: 100vw;
@@ -126,11 +126,12 @@ a:link, a:visited {
 }
 .exercises-container {
     display: flex;
-    gap: 2vw;
+    flex-wrap: wrap;
+    gap: 8vw;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.5);
     width: 100vw;
-    padding: 1vw 0;
+    padding: 1vw 10vw;
 }
 .exercise-1 h2 {
     font-family: Rubik;
@@ -144,6 +145,9 @@ a:link, a:visited {
 }
 .exercise-1 img {
     width: 40vw;
+}
+.jump-vid {
+    height: 35vw;
 }
 
 
@@ -242,7 +246,10 @@ a:link, a:visited {
   }
 
 
-
+.korean-jump {
+    align-items: center;
+    justify-content: center;;
+}
   
 @-webkit-keyframes animatetop {
     from {
@@ -315,8 +322,12 @@ a:link, a:visited {
 
 
 @media (max-width: 1000px) {
+    .exercises-container {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
     .timer-container {
-        height: 100vh !important;
+        /* height: 100vh !important; */
         justify-content: center !important;
     }
     .button-90s {
@@ -342,6 +353,10 @@ a:link, a:visited {
     }
     .exercise-1 img {
         width: 80vw !important;
+    }
+    .jump-vid {
+        width: 80vw !important;
+        height: auto;
     }
     .exercise-1 h2 {
         font-size: 4vw;
