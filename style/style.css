@@ -131,7 +131,7 @@ a:link, a:visited {
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.5);
     width: 100vw;
-    padding: 1vw 10vw;
+    padding: 1vw 0;
 }
 .exercise-1 h2 {
     font-family: Rubik;
@@ -145,11 +145,19 @@ a:link, a:visited {
 }
 .exercise-1 img {
     width: 40vw;
+    border-radius: 2vw;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.348);
 }
 .jump-vid {
     height: 35vw;
+    border-radius: 2vw;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.548);
+    padding: 1vw;
 }
-
+.jump-vid-main {
+    padding: 0;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.348);
+}
 
 
 
@@ -174,9 +182,10 @@ a:link, a:visited {
     justify-content: center;
 }
 .training-img {
-    border-radius: 1vw;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.61);
     cursor: pointer;
+    border-radius: 2vw;
+    padding: 1vw;
 }
 
 
@@ -184,7 +193,7 @@ a:link, a:visited {
     animation: timer90s 90s linear;
 }
 .timer-120s-anim {
-    animation: timer120s 90s linear;
+    animation: timer120s 120s linear;
 }
 
 /* progress on dumbbell ex-s page */
@@ -245,8 +254,12 @@ a:link, a:visited {
             animation: animbottom 0.4s ease-in;
   }
 
-
+.header-text {
+    cursor: pointer;
+}
 .korean-jump {
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;;
 }

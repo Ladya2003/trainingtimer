@@ -56,7 +56,7 @@ function progressBar90s() {
     setTimeout(audio, 90500);
 
     let timer = document.querySelector(".timer");
-    timer.classList.remove("timer-120s-anim");
+    // timer.classList.remove("timer-120s-anim");
     timer.classList.add("timer-90s-anim");
     // setTimeout(timer.classList.remove("timer-90s-anim"))
 }
@@ -67,7 +67,7 @@ function progressBar120s() {
     setTimeout(audio, 119000);
 
     let timer = document.querySelector(".timer");
-    timer.classList.remove("timer-90s-anim");
+    // timer.classList.remove("timer-90s-anim");
     timer.classList.add("timer-120s-anim");
 }
 
