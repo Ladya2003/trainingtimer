@@ -230,8 +230,11 @@ a:link, a:visited {
 .modal-content {
     position: relative;
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;;
+    overflow: scroll;;
     justify-content: center;
-    gap: 10vw;
+    gap: 2vw;
     background-color: rgba(73, 68, 68, 0.8156862745);
     margin: auto;
     padding: 2vw;
@@ -240,6 +243,13 @@ a:link, a:visited {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     -webkit-animation: animatetop 0.4s ease-out;
             animation: animatetop 0.4s ease-out;
+  }
+  .modal-container-for-imgs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
   }
   .modal-content a {
     margin: 0;
@@ -326,6 +336,19 @@ a:link, a:visited {
     height: 90vh !important;
     width: auto !important;
     border-radius: 2vw;
+  }
+  .training-img-in-modal2 {
+    height: 70vh !important;
+  }
+  .header-text2:hover {
+    letter-spacing: 0px !important;
+  }
+  .header-text2 {
+    margin-left: 10vw;
+    cursor: inherit !important;
+  }
+  .header-text3 {
+    margin-top: 6vw;
   }
 
 
